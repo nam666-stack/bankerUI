@@ -103,7 +103,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -174,7 +174,7 @@
         <attribute name="title">
          <string>Request</string>
         </attribute>
-        <widget class="QTableWidget" name="Request">
+        <widget class="QTableWidget" name="Request_table">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -189,7 +189,7 @@
         <attribute name="title">
          <string>Need</string>
         </attribute>
-        <widget class="QTableWidget" name="Need">
+        <widget class="QTableWidget" name="Need_table">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -197,6 +197,9 @@
            <width>371</width>
            <height>192</height>
           </rect>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
          </property>
         </widget>
        </widget>
