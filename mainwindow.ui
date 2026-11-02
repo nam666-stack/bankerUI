@@ -14,99 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextEdit" name="txtLog">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>0</y>
-      <width>541</width>
-      <height>241</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>240</y>
-      <width>331</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>3</number>
-    </property>
-    <widget class="QWidget" name="tab_1">
-     <attribute name="title">
-      <string>Allocation</string>
-     </attribute>
-     <widget class="QTableWidget" name="Allocation_table">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>1</y>
-        <width>311</width>
-        <height>191</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Max</string>
-     </attribute>
-     <widget class="QTableWidget" name="Max_table">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>0</y>
-        <width>311</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>Available</string>
-     </attribute>
-     <widget class="QTableWidget" name="Available_table">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>0</y>
-        <width>311</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>Request</string>
-     </attribute>
-     <widget class="QTableWidget" name="Request">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>0</y>
-        <width>311</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QWidget" name="formLayoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
       <width>161</width>
-      <height>81</height>
+      <height>101</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -115,13 +29,6 @@
      </item>
      <item row="1" column="0">
       <widget class="QSpinBox" name="spinN"/>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLabel" name="label_1">
-       <property name="text">
-        <string>số loại tài nguyên.</string>
-       </property>
-      </widget>
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="label_2">
@@ -137,95 +44,165 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_1">
+       <property name="text">
+        <string>số loại tài nguyên.</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>80</y>
-      <width>161</width>
-      <height>161</height>
+      <y>100</y>
+      <width>156</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="title">
      <string/>
     </property>
-    <widget class="QPushButton" name="BankerSafety_bt">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Kiểm tra Banker Safety</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="DeadlockDetect_bt">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Phát hiện Deadlock</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="LoadSample_bt">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>130</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Đọc dữ liệu mẫu/CSV</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="Recover_bt">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>100</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Phục hồi</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="BankerRequest_bt">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string> Xử lý Banker Request</string>
-     </property>
-    </widget>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="BankerSafety_bt">
+       <property name="text">
+        <string>Kiểm tra Banker Safety</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="BankerRequest_bt">
+       <property name="text">
+        <string> Xử lý Banker Request</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="DeadlockDetect_bt">
+       <property name="text">
+        <string>Phát hiện Deadlock</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Recover_bt">
+       <property name="text">
+        <string>Phục hồi</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="LoadSample_bt">
+       <property name="text">
+        <string>Đọc dữ liệu mẫu/CSV</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QTableWidget" name="Need">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>270</y>
-      <width>321</width>
-      <height>192</height>
+      <x>160</x>
+      <y>0</y>
+      <width>411</width>
+      <height>391</height>
      </rect>
     </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QTextEdit" name="txtLog">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>4</number>
+       </property>
+       <widget class="QWidget" name="tab_1">
+        <attribute name="title">
+         <string>Allocation</string>
+        </attribute>
+        <widget class="QTableWidget" name="Allocation_table">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>1</y>
+           <width>371</width>
+           <height>191</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Max</string>
+        </attribute>
+        <widget class="QTableWidget" name="Max_table">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>371</width>
+           <height>192</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>Available</string>
+        </attribute>
+        <widget class="QTableWidget" name="Available_table">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>371</width>
+           <height>192</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>Request</string>
+        </attribute>
+        <widget class="QTableWidget" name="Request">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>371</width>
+           <height>192</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>Need</string>
+        </attribute>
+        <widget class="QTableWidget" name="Need">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>371</width>
+           <height>192</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
